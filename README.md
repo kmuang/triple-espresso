@@ -18,16 +18,6 @@ This project showcases a modern and responsive design for a coffee shop's websit
 
 ![Reservation Form GIF](https://example.com/reservation-form.gif)
 
-## Live Demo
-
-Experience the live version of the project here: [Triple Peaks Coffee Shop Live Demo](https://sawsimonlinn.github.io/se_project_coffeeshop/)
-
-## Demo Video
-
-For a comprehensive walkthrough of the website's features, watch the demo video:
-
-[![Triple Peaks Coffee Shop Demo Video](https://demirsondaj.com.tr/wp-content/uploads/demo/placeholder.svg)](https://example.com/demo-video.mp4)
-
 ## Deployment and System Requirements
 
 As this is a static website, you can run it locally or deploy it to any web server without specific system requirements.
@@ -37,7 +27,7 @@ As this is a static website, you can run it locally or deploy it to any web serv
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/SawSimonLinn/se_project_coffeeshop.git
+   git clone https://github.com/kmuang/coffee-shop.git
    cd se_project_coffeeshop
    ```
 
