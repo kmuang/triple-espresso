@@ -1,0 +1,59 @@
+.page {
+  --color-ink: #0f1b2d;
+  --color-muted: #566170;
+  --color-cream: #fff;
+  --color-accent: #2f80ed;
+  --color-accent-dark: #1f66c7;
+  min-width: 320px;
+  max-width: 1600px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--color-ink);
+  background: var(--color-cream);
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #0a2850;
+  outline-offset: 3px;
+}
+
+::selection {
+  color: #fff;
+  background: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

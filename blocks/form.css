@@ -1,0 +1,135 @@
+.form {
+  font-family: "Inter", Arial, sans-serif;
+  width: min(100%, 440px);
+}
+
+.reservation__form {
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 40px);
+  border: 1px solid rgb(23 43 39 / 8%);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgb(23 43 39 / 10%);
+}
+
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form__label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form__input {
+  display: block;
+  box-sizing: border-box;
+  border: solid 1px #cbd2cc;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form__input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgb(47 128 237 / 18%);
+  outline: none;
+}
+
+.form__input[type="text"],
+.form__input[type="number"],
+.form__input[type="datetime-local"],
+.form__input[type="email"] {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-ink);
+  width: 100%;
+  min-height: 52px;
+  margin: 8px 0 22px;
+  padding: 0 14px;
+}
+
+.form__input::placeholder {
+  color: #6b7380;
+}
+
+.form__button {
+  font-weight: 600;
+  min-height: 54px;
+  width: 100%;
+  background-color: var(--color-accent);
+  color: #fff;
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  opacity: 1;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.form__button:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-1px);
+}
+
+.form__label[for="book-a-table"] {
+  color: var(--color-muted);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 22px 0 0;
+  gap: 10px;
+}
+
+.form__input[type="checkbox"] {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-accent);
+}
+
+.form__hint {
+  margin: -10px 0 22px;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.form__link {
+  color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+.form__button:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.form__status {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form__status:not(:empty) {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 6px;
+}
+
+.form__status_success {
+  color: #0a3d91;
+  background: #e1ecfd;
+}
+
+.form__status_error {
+  color: #7f1d1d;
+  background: #fde8e8;
+}
+
+.form__input:user-invalid {
+  border-color: #b42318;
+}

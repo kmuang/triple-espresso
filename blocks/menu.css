@@ -1,0 +1,48 @@
+.menu {
+  font-family: "Inter", Arial, sans-serif;
+  background-color: var(--color-cream);
+  background-image: url("../images/background_menu.svg");
+  background-position: center;
+  background-size: cover;
+  padding: clamp(72px, 9vw, 120px) clamp(24px, 7vw, 112px);
+}
+
+.menu__title {
+  max-width: 780px;
+  font-weight: 500;
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+.menu__subtitle {
+  font-family: "Noto Serif", "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.7;
+  text-align: center;
+  color: var(--color-muted);
+  margin: 0 auto 48px;
+  max-width: 680px;
+}
+
+.menu__card {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 22px;
+  padding: 0;
+}
+
+@media (max-width: 560px) {
+  .menu {
+    padding: 68px 22px;
+  }
+
+  .menu__subtitle {
+    margin-bottom: 34px;
+  }
+}

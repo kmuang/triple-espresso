@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Triple Espresso is a cozy coffee shop inside the Triple Peaks Library. Fairtrade coffee, fresh baked goods, free WiFi and tables you can book online."
+    />
+    <meta name="author" content="Khup Muang" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Triple Espresso" />
+    <meta property="og:title" content="Triple Espresso | Specialty coffee for your next great idea" />
+    <meta
+      property="og:description"
+      content="A cozy study-friendly coffee shop inside the Triple Peaks Library. Browse the menu and book a table online."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#2f80ed" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <script src="./scripts/site.js" defer></script>
+    <title>Triple Espresso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="./index.html" class="nav__home">
+            <img
+              src="./images/logo_coffeeshop_dark.svg"
+              alt="Triple Espresso home"
+              class="nav__logo"
+            />
+          </a>
+          <button
+            type="button"
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Toggle menu"
+          >
+            <span class="nav__toggle-bar"></span>
+          </button>
+          <ul class="nav__links" id="nav-links">
+            <li>
+              <a href="#recipes" class="nav__link">Recipes</a>
+            </li>
+            <li>
+              <a href="#reservation" class="nav__link">Book a table</a>
+            </li>
+            <li>
+              <a href="#menu" class="nav__link">Menu</a>
+            </li>
+            <li>
+              <a href="./contact.html" class="nav__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="header__title">
+          <span class="header__span-accent">Specialty coffee</span> for your
+          next great idea.
+        </h1>
+        <p class="header__description">
+          Welcome to our study zone! We've got the coffee to energize you and
+          the cozy vibes to help you get creative.
+        </p>
+        <a class="header__button" href="#reservation">Find your table</a>
+        <img
+          src="./images/inside_coffee_shop.webp"
+          alt="the inside view of coffee bar with library"
+          class="header__image"
+          width="1292"
+          height="1136"
+        />
+        <div class="header__footer">
+          <div class="header__paragraphs">
+            <p class="header__paragraph">Hours:</p>
+            <p class="header__paragraph">Monday - Friday (10:00 - 21:00)</p>
+            <p class="header__paragraph">Saturday - Sunday (11:00 - 18:00)</p>
+          </div>
+          <p class="header__paragraph">
+            200 Success Avenue, The Town of Triple Peaks
+          </p>
+        </div>
+      </header>
+      <main class="content">
+        <section class="recipes" id="recipes">
+          <h2 class="recipes__title">Recipes</h2>
+          <p class="recipes__subtitle">
+            Check out some recipes we've collected for your home-brewing
+            convenience:
+          </p>
+          <ul class="recipes__videos">
+            <li class="recipes__video">
+              <button
+                type="button"
+                class="recipes__facade"
+                data-video-id="j6VlT_jUVPc"
+                data-title="Aeropress coffee recipe"
+                aria-label="Play video: Aeropress coffee recipe"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/j6VlT_jUVPc/hqdefault.jpg"
+                  alt=""
+                  class="recipes__thumb"
+                  width="480"
+                  height="360"
+                  loading="lazy"
+                />
+                <span class="recipes__play" aria-hidden="true"></span>
+              </button>
+              <p class="recipes__video-caption">
+                <span>Aeropress recipe</span> ~5 min
+              </p>
+            </li>
+            <li class="recipes__video">
+              <button
+                type="button"
+                class="recipes__facade"
+                data-video-id="st571DYYTR8"
+                data-title="French press coffee recipe"
+                aria-label="Play video: French press coffee recipe"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/st571DYYTR8/hqdefault.jpg"
+                  alt=""
+                  class="recipes__thumb"
+                  width="480"
+                  height="360"
+                  loading="lazy"
+                />
+                <span class="recipes__play" aria-hidden="true"></span>
+              </button>
+              <p class="recipes__video-caption">
+                <span>French press recipe</span> ~5 min
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="reservation" id="reservation">
+          <h2 class="reservation__title">Book a table</h2>
+          <form
+            class="reservation__form form"
+            action="https://formspree.io/f/xjyvwyqd"
+            method="POST"
+            data-success="Thanks! Your table request is in. We'll email you to confirm."
+          >
+            <input type="hidden" name="_subject" value="Table reservation" />
+            <fieldset class="form__fieldset">
+              <label for="username" class="form__label"
+                >Name *
+                <input
+                  type="text"
+                  id="username"
+                  name="name"
+                  class="form__input"
+                  placeholder="Name Surname"
+                  required
+              /></label>
+
+              <label for="number-of-guests" class="form__label"
+                >Number of guests *
+                <input
+                  type="number"
+                  min="1"
+                  max="8"
+                  id="number-of-guests"
+                  name="guests"
+                  class="form__input"
+                  placeholder="1-8"
+                  required
+              /></label>
+
+              <label for="date-time" class="form__label"
+                >Date & time *
+                <input
+                  type="datetime-local"
+                  id="date-time"
+                  name="date_time"
+                  class="form__input"
+                  aria-describedby="date-hint"
+                  required
+              /></label>
+              <p class="form__hint" id="date-hint">
+                Open Mon - Fri 10:00 - 21:00, Sat - Sun 11:00 - 18:00.
+              </p>
+
+              <label for="your-email" class="form__label"
+                >Your email *
+                <input
+                  type="email"
+                  id="your-email"
+                  name="email"
+                  class="form__input"
+                  placeholder="email@email.com"
+                  required
+              /></label>
+            </fieldset>
+            <button type="submit" class="form__button">Book a table</button>
+            <label class="form__label" for="book-a-table">
+              <input
+                type="checkbox"
+                name="terms"
+                id="book-a-table"
+                class="form__input"
+                required
+              />
+              <span
+                >I agree with the
+                <a href="./terms.html" class="form__link" target="_blank"
+                  >terms of use</a
+                ></span
+              >
+            </label>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+        <section class="menu" id="menu">
+          <h2 class="menu__title">Menu</h2>
+          <p class="menu__subtitle">
+            We brew coffee from locally roasted, Fairtrade certified beans and
+            use biodegradable cups. All teas from our collection are $2/cup.
+          </p>
+          <ul class="menu__card">
+            <li class="card">
+              <h3 class="card__title">Filter</h3>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  Regular (12 oz)
+                  <span class="card__list-divider"></span>
+                  $1
+                </li>
+                <li class="card__list-item">
+                  Large (16 oz)
+                  <span class="card__list-divider"></span>
+                  $1.25
+                </li>
+                <li class="card__list-item">
+                  Large (20 oz)
+                  <span class="card__list-divider"></span>
+                  $1.5
+                </li>
+                <li class="card__list-item">
+                  Party-size (24 oz, decaf)
+                  <span class="card__list-divider"></span>
+                  $1.75
+                </li>
+                <li class="card__list-item">
+                  Iced Coffee (16 oz)
+                  <span class="card__list-divider"></span>
+                  $1.25
+                </li>
+              </ul>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Espresso</h3>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  Macchiato
+                  <span class="card__list-divider"></span>
+                  $2.25
+                </li>
+                <li class="card__list-item">
+                  Cortado
+                  <span class="card__list-divider"></span>
+                  $2.5
+                </li>
+                <li class="card__list-item">
+                  Mocha
+                  <span class="card__list-divider"></span>
+                  $3
+                </li>
+                <li class="card__list-item">
+                  Sunrise in the Bay Area (decaf)
+                  <span class="card__list-divider"></span>
+                  $10
+                </li>
+              </ul>
+            </li>
+            <li class="card">
+              <h3 class="card__title">Baked Goods</h3>
+              <ul class="card__list">
+                <li class="card__list-item">
+                  Almond Croissant
+                  <span class="card__list-divider"></span>
+                  $2
+                </li>
+                <li class="card__list-item">
+                  Banana Bread
+                  <span class="card__list-divider"></span>
+                  $1.75
+                </li>
+                <li class="card__list-item">
+                  Key Lime Pie
+                  <span class="card__list-divider"></span>
+                  $3
+                </li>
+                <li class="card__list-item">
+                  Blue Velvet Cake
+                  <span class="card__list-divider"></span>
+                  $3.75
+                </li>
+                <li class="card__list-item">
+                  Web Cookie
+                  <span class="card__list-divider"></span>
+                  $2
+                </li>
+                <li class="card__list-item">
+                  Fresh Baguette
+                  <span class="card__list-divider"></span>
+                  $0.25
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="about" id="about">
+          <h2 class="about__title">About the coffee shop</h2>
+          <div class="about__content">
+            <p class="about__paragraph">
+              Our coffee shop is located in the Triple Peaks Library. It
+              features 6 tables and free WiFi.
+            </p>
+            <p class="about__paragraph">
+              Our main mission is keeping guests cozy and energized.
+            </p>
+            <p class="about__paragraph">
+              Besides that, we try to reduce our environmental impact — so we
+              don't sell single-use cups. But you can buy one of our reusable
+              cups!
+            </p>
+          </div>
+          <div class="about__circle"></div>
+          <div class="about__circle about__circle_animation_blurred"></div>
+        </section>
+      </main>
+      <footer class="footer" id="footer">
+        <div class="footer__content">
+          <img
+            src="./images/logo_coffeeshop_light.svg"
+            alt="coffee shop logo"
+            class="footer__logo"
+          />
+          <div>
+            <h3 class="footer__social-heading">Social media</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <img
+                  src="./images/facebook_white.svg"
+                  alt="facebook logo"
+                  class="footer__social-icon"
+                />
+                <a
+                  href="https://www.facebook.com/"
+                  class="footer__social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li class="footer__list-item">
+                <img
+                  src="./images/instagram_white.svg"
+                  alt="instagram logo"
+                  class="footer__social-icon"
+                />
+                <a
+                  href="https://www.instagram.com/"
+                  class="footer__social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copyright">&copy; 2026 Khup Muang</p>
+      </footer>
+    </div>
+  </body>
+</html>

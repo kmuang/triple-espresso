@@ -1,0 +1,131 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav__logo {
+  display: block;
+  width: 112px;
+  height: auto;
+}
+
+.nav__links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: clamp(16px, 2.5vw, 36px);
+  font-weight: 500;
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  transition: color 180ms ease;
+}
+
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+.nav__home {
+  display: block;
+  line-height: 0;
+}
+
+.nav__toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgb(23 43 39 / 18%);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__toggle-bar,
+.nav__toggle-bar::before,
+.nav__toggle-bar::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-ink);
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.nav__toggle-bar {
+  position: relative;
+}
+
+.nav__toggle-bar::before,
+.nav__toggle-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav__toggle-bar::before {
+  top: -6px;
+}
+
+.nav__toggle-bar::after {
+  top: 6px;
+}
+
+.nav_open .nav__toggle-bar {
+  background: transparent;
+}
+
+.nav_open .nav__toggle-bar::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav_open .nav__toggle-bar::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 700px) {
+  .nav {
+    position: relative;
+  }
+
+  .nav__toggle {
+    display: inline-flex;
+  }
+
+  .nav__links {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 10px);
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px;
+    border: 1px solid rgb(23 43 39 / 10%);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 16px 40px rgb(23 43 39 / 14%);
+  }
+
+  .nav_open .nav__links {
+    display: flex;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 14px 12px;
+    font-size: 16px;
+  }
+}
